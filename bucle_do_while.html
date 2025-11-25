@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        let codigoAcceso = "123456";
+        let codigoIngreso;
+
+        let contadorIntento = 1;
+
+        let continuar = true;
+
+        do {
+
+            codigoIngreso = prompt(`Intento N° ${contadorIntento}: Ingresa el código de acceso`);
+
+            
+            continuar = codigoAcceso != codigoIngreso;
+
+            if(contadorIntento == 3){
+                continuar = false;
+                alert("Superó el límite de intentos válidos.")
+            }
+
+            contadorIntento++;
+
+        } while (continuar);
+
+
+    </script>
+</body>
+
+</html>
